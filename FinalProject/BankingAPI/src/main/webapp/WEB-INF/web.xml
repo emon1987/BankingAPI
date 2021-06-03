@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<display-name>BankingAPI</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+
+	<servlet>
+		<description></description>
+		<display-name>LoginServlet</display-name>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.project.servlets.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>LogoutServlet</display-name>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>com.project.servlets.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>RegisterServlet</display-name>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>com.project.servlets.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description></description>
+		<display-name>AccountServlet</display-name>
+		<servlet-name>AccountServlet</servlet-name>
+		<servlet-class>com.project.servlets.AccountServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AccountServlet</servlet-name>
+		<url-pattern>/accounts</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>AccountByID_TransactionServlet</display-name>
+		<servlet-name>AccountByID_TransactionServlet</servlet-name>
+		<servlet-class>com.project.servlets.AccountByID_TransactionServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AccountByID_TransactionServlet</servlet-name>
+		<url-pattern>/accounts/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>FindUserByIdServlet</display-name>
+		<servlet-name>FindUserByIdServlet</servlet-name>
+		<servlet-class>com.project.servlets.FindUserByIdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindUserByIdServlet</servlet-name>
+		<url-pattern>/users/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>AdminUserActions</display-name>
+		<servlet-name>AdminUserActions</servlet-name>
+		<servlet-class>com.project.servlets.AdminUserActions</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminUserActions</servlet-name>
+		<url-pattern>/users</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>FindAccountsByUserAndType</display-name>
+		<servlet-name>FindAccountsByUserAndType</servlet-name>
+		<servlet-class>com.project.servlets.FindAccountsByUserAndType</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindAccountsByUserAndType</servlet-name>
+		<url-pattern>/accounts/owner/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description></description>
+		<display-name>FindAccountsByStatusServlet</display-name>
+		<servlet-name>FindAccountsByStatusServlet</servlet-name>
+		<servlet-class>com.project.servlets.FindAccountsByStatusServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindAccountsByStatusServlet</servlet-name>
+		<url-pattern>/accounts/status/*</url-pattern>
+	</servlet-mapping>
+
+</web-app>
